@@ -1,0 +1,21 @@
+.header {
+  padding: 5rem 0;
+  background-color: var(--primary-cyan);
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 3rem;
+    color: var(--primary-yellow);
+  }
+
+  &__image {
+    img {
+      max-width: 10rem;
+    }
+  }
+}

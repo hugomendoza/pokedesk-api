@@ -1,0 +1,12 @@
+:root {
+  
+  /* colors */
+  --primary-yellow: #fbd743;
+  --primary-red: #ff1f1f;
+  --primary-cyan: #5db9ff;
+  --primary-blue: #363b81;
+  
+  /* fonts */
+  --primary-font: 'Pokemon Solid';
+  --secondary-font: 'Oxanium', cursive;
+}

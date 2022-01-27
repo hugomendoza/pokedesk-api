@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Pokemon Solid';
+  src: url('../fonts/PokemonSolidNormal.eot');
+  src: url('../fonts/PokemonSolidNormal.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PokemonSolidNormal.woff2') format('woff2'),
+      url('../fonts/PokemonSolidNormal.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('../fonts/Oxanium-Bold.woff2') format('woff2'),
+      url('../fonts/Oxanium-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('../fonts/Oxanium-Light.woff2') format('woff2'),
+      url('../fonts/Oxanium-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oxanium';
+  src: url('../fonts/Oxanium-Regular.woff2') format('woff2'),
+      url('../fonts/Oxanium-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
