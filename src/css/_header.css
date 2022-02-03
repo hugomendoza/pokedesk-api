@@ -21,4 +21,21 @@
       max-width: 5rem;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+
+    &__content {
+      flex-wrap: wrap;
+    }
+
+    &__image {
+      display: none;
+    }
+
+    &__title {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
 }

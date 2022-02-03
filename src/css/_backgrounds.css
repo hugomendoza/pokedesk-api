@@ -1,0 +1,77 @@
+.bg--bug {
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2% );
+}
+
+.bg--dark {
+  background-image: linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% );
+}
+
+.bg--dragon {
+  background-image: linear-gradient( 113.3deg,  rgba(134,209,228,1) -1.8%, rgba(60,80,115,1) 86.4% );
+}
+
+.bg--electric {
+  background-image: radial-gradient( circle 534px at 7.8% 17.6%,  rgba(254,253,112,1) 1.7%, rgba(248,143,111,1) 91.8% );
+  span {
+    color: var(--primary-green);
+  }
+}
+
+.bg--fairy {
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,236,231,1) 0%, rgba(255,143,108,1) 90.1% );
+}
+
+.bg--fighting {
+  background-image: linear-gradient( 112.4deg,  rgba(169,28,115,1) 21.6%, rgba(219,112,54,1) 92.2% );
+}
+
+.bg--fire {
+  background-image: linear-gradient( 112.7deg,  rgba(253,185,83,1) 11.4%, rgba(255,138,0,1) 70.2% );
+}
+
+.bg--flying {
+  background-image: linear-gradient( 106.1deg,  rgba(69,242,143,0.52) 10.2%, rgba(14,228,175,0.61) 83.6% );
+}
+
+.bg--ghost {
+  background-image: radial-gradient( circle 732px at -23.9% -25.1%,  rgba(30,39,107,1) 6.1%, rgba(188,104,142,1) 100.2% );
+}
+
+.bg--grass {
+  background-image: linear-gradient( 109.6deg,  rgba(96,221,142,1) 11.2%, rgba(24,138,141,1) 91.1% );
+}
+
+.bg--ground {
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(233,175,132,1) 0%, rgba(186,126,81,1) 95.6% );
+}
+
+.bg--ice {
+  background-image: linear-gradient( 358.7deg,  rgba(42,136,157,1) 1.7%, rgba(122,197,214,1) 51.1%, rgba(211,232,242,1) 95.5% );
+}
+
+.bg--normal {
+  background-image: linear-gradient( 109.6deg,  rgba(120,212,234,1) 11.2%, rgba(216,226,253,1) 72.1% );
+  span {
+    color: var(--primary-green);
+  }
+}
+
+.bg--poison {
+  background-image: linear-gradient( 109.6deg,  rgba(101,58,150,1) 29.9%, rgba(168,141,194,1) 99.9% );
+}
+
+.bg--psychic {
+  background-image: linear-gradient( 102.2deg,  rgba(250,45,66,1) 9.6%, rgba(245,104,104,1) 96.1% );
+}
+
+.bg--rock {
+  background-image: linear-gradient( 110.3deg,  rgba(238,179,123,1) 8.7%, rgba(216,103,77,1) 47.5%, rgba(114,43,54,1) 89.1% );
+}
+
+.bg--steel {
+  background-image: radial-gradient( circle 919px at 1.7% 6.1%,  rgba(41,58,76,1) 0%, rgba(40,171,226,1) 100.2% );
+}
+
+.bg--water {
+  background-image: linear-gradient( 111.8deg,  rgba(0,104,155,1) 19.8%, rgba(0,173,239,1) 92.1% );
+}

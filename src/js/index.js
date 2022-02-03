@@ -8,11 +8,13 @@ const wrapperCard = document.querySelector(".cards")
 const apiUrl = "https://pokeapi.co/api/v2/pokemon/"
 
 
-const addPokemonCard = (name, sprites) => {
+const addPokemonCard = (name, sprites, id, height, types, weight, base_experience) => {
   let cardPokemon = 
   `
     <article class="card">
-      <div class="card__content card__content--fire">
+      <div
+        class="card__content ${types.map((type) => ` bg--${type.type.name}`).shift()}"
+      >
         <figure class="card__image">
           <img
             src="${sprites.other.home.front_default}"
@@ -21,30 +23,31 @@ const addPokemonCard = (name, sprites) => {
           >
         </figure>
         <div class="card__body">
-          <h4 class="card__name">${name}</h4>
+          <h4 class="card__name">${name == 'raticate' ? 'el brayan' : name}</h4>
           <div class="card__wrapper-data">
             <div class="card__info">
               <p class="card__info-title">Número:</p>
-              <p class="card__info-text">5</p>
+              <p class="card__info-text">${id}</p>
             </div>
             <div class="card__info">
               <p class="card__info-title">Altura:</p>
-              <p class="card__info-text">6</p>
+              <p class="card__info-text">${height}</p>
             </div>
             <div class="card__info">
               <p class="card__info-title">Tipo:</p>
               <div>
-                <span class="card__type">fire</span>
-                <span class="card__type">flying</span>
+              ${types.map((type) => `
+                <span class="card__type bg--${type.type.name}">${type.type.name}</span>
+              `).join('')}
               </div>
             </div>
             <div class="card__info">
               <p class="card__info-title">Peso:</p>
-              <p class="card__info-text">20</p>
+              <p class="card__info-text">${weight}</p>
             </div>
             <div class="card__info">
               <p class="card__info-title">Expriencia base:</p>
-              <p class="card__info-text">20</p>
+              <p class="card__info-text">${base_experience}</p>
             </div>
           </div>
         </div>
@@ -65,9 +68,9 @@ const handleApiFetch = (arg) => {
   fetch(`${apiUrl}${arg}`)
   .then(response => response.json())
   .then(data => {
-      const { name, sprites } = data
+      const { name, sprites, id, height, types, weight, base_experience } = data
       removeAllChildNodes(wrapperCard);
-      wrapperCard.innerHTML += addPokemonCard(name, sprites)
+      wrapperCard.innerHTML += addPokemonCard(name, sprites, id, height, types, weight, base_experience)
       console.log(data);
     })
 }
@@ -88,8 +91,8 @@ const handleInitApi = () => {
     fetch(`${apiUrl}${[i]}`)
       .then(response => response.json())
       .then(data => {
-        const { name, sprites } = data
-        wrapperCard.innerHTML += addPokemonCard(name, sprites)
+        const { name, sprites, id, height, types, weight, base_experience } = data
+        wrapperCard.innerHTML += addPokemonCard(name, sprites, id, height, types, weight, base_experience)
       })
     }
 }
