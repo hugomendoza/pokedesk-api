@@ -14,7 +14,7 @@ module.exports = {
       directory: path.join(__dirname, './index.html'),
     },
     compress: true,
-    port: 8080,
+    port: 8383,
     open: true
   },
   module: {

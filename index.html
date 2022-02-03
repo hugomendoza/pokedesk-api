@@ -5,42 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PodeDesk JavaScript</title>
+  <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 <body>
   <section class="main">
     <header class="header">
       <div class="header__content">
-        <h1 class="header__title">
-          Pokedesk JavaScript
-        </h1>
-        <h2></h2>
-        <img>
+        <div>
+          <h1 class="header__title">
+            Pokedesk JavaScript
+          </h1>
+          <form action="" class="form">
+            <input class="form__input" name="name" type="text">
+            <input class="form__submit" type="submit" value="Buscar">
+          </form>
+        </div>
         <figure class="header__image">
           <img src="./src/img/pikachu.png" alt="Pikachu">
         </figure>
       </div>
-      <form action="" class="form">
-        <input class="form__input" name="name" type="text">
-        <input class="form__submit" type="submit" value="Buscar">
-      </form>
-      <label>Elija un sabor de nieve:
-        <select class="nieve" name="nieve">
-            <option value="">Seleccione Uno …</option>
-            <option value="chocolate">Chocolate</option>
-            <option value="sardina">Sardina</option>
-            <option value="vainilla">Vainilla</option>
-        </select>
-    </label>
     </header>
   </section>
   <section class="cards">
-    <div class="card">
-      <img src="./src/img/pikachu.png" alt="Pokemon name">
-      <div class="container">
-        <h4><b>John Doe</b></h4>
-        <p>Architect & Engineer</p>
-      </div>
-    </div>
   </section>
+  <script src="./dist/js/bundle.js"></script>
 </body>
 </html>

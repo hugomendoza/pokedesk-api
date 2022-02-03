@@ -5,8 +5,9 @@
   --primary-red: #ff1f1f;
   --primary-cyan: #5db9ff;
   --primary-blue: #363b81;
+  --primary-green: #315b6c;
   
   /* fonts */
-  --primary-font: 'Pokemon Solid';
-  --secondary-font: 'Oxanium', cursive;
+  --primary-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Work Sans', sans-serif;
 }
