@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --mode=development --config webpack.config.js",
-    "build": "webpack --mode production"
+    "dev": "webpack serve --open --config webpack.dev.js",
+    "prod": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -33,7 +33,8 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.66.0",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.7.3"
+    "webpack-dev-server": "^4.7.3",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "image-webpack-loader": "^8.1.0",

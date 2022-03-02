@@ -4,8 +4,8 @@ if (module.hot) {
   module.hot.accept();
 }
 
-const wrapperCard = document.querySelector(".cards")
 const apiUrl = "https://pokeapi.co/api/v2/pokemon/"
+const wrapperCard = document.querySelector(".cards")
 
 
 const addPokemonCard = (name, sprites, id, height, types, weight, base_experience) => {
@@ -60,7 +60,7 @@ const addPokemonCard = (name, sprites, id, height, types, weight, base_experienc
 
 function removeAllChildNodes(parent) {
   while (parent.firstChild) {
-      parent.removeChild(parent.firstChild);
+    parent.removeChild(parent.firstChild);
   }
 }
 
