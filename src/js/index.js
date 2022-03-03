@@ -4,8 +4,8 @@ if (module.hot) {
   module.hot.accept();
 }
 
-const wrapperCard = document.querySelector(".cards")
 const apiUrl = "https://pokeapi.co/api/v2/pokemon/"
+const wrapperCard = document.querySelector(".cards")
 
 
 const addPokemonCard = (name, sprites, id, height, types, weight, base_experience) => {
@@ -60,7 +60,7 @@ const addPokemonCard = (name, sprites, id, height, types, weight, base_experienc
 
 function removeAllChildNodes(parent) {
   while (parent.firstChild) {
-      parent.removeChild(parent.firstChild);
+    parent.removeChild(parent.firstChild);
   }
 }
 
@@ -71,7 +71,6 @@ const handleApiFetch = (arg) => {
       const { name, sprites, id, height, types, weight, base_experience } = data
       removeAllChildNodes(wrapperCard);
       wrapperCard.innerHTML += addPokemonCard(name, sprites, id, height, types, weight, base_experience)
-      console.log(data);
     })
 }
 
@@ -79,7 +78,8 @@ const handleFormSubmit = (event) => {
   event.preventDefault();
   const formData = new FormData(event.target)
   const valueName = formData.get('name')
-  handleApiFetch(valueName)
+  const resultName = valueName.toLowerCase();
+  handleApiFetch(resultName)
 }
 
 const formSubmit = document.querySelector(".form");
