@@ -66,25 +66,32 @@ function removeAllChildNodes(parent) {
 
 const handleApiFetch = (arg) => {
   fetch(`${apiUrl}${arg}`)
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) throw Error(response.status);
+    return response.json();
+  })
   .then(data => {
-      const { name, sprites, id, height, types, weight, base_experience } = data
-      removeAllChildNodes(wrapperCard);
-      wrapperCard.innerHTML += addPokemonCard(name, sprites, id, height, types, weight, base_experience)
-    })
+    const { name, sprites, id, height, types, weight, base_experience } = data
+    removeAllChildNodes(wrapperCard); 
+    wrapperCard.innerHTML += addPokemonCard(name, sprites, id, height, types, weight, base_experience)
+  })
+  .catch(() => wrapperCard.innerHTML = "No se encuentra Pokemon");
 }
 
-const handleFormSubmit = (event) => {
+const handleFormSubmit = async (event) => {
   event.preventDefault();
-  const formData = new FormData(event.target)
-  const valueName = formData.get('name')
-  const resultName = valueName.toLowerCase();
+
+  const inputValue = document.querySelector(".form__input").value;
+  // const formData = new FormData(inputValue)
+  // const valueName = formData.get('name')
+  const resultName = await inputValue.toLowerCase();
   handleApiFetch(resultName)
+  console.log(inputValue)
 }
 
 const formSubmit = document.querySelector(".form");
 
-formSubmit.addEventListener("submit", handleFormSubmit)
+formSubmit.addEventListener("keyup", handleFormSubmit)
 
 const handleInitApi = () => {
   for (var i = 1; i < 21; i++) {
