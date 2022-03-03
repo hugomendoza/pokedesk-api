@@ -71,7 +71,6 @@ const handleApiFetch = (arg) => {
       const { name, sprites, id, height, types, weight, base_experience } = data
       removeAllChildNodes(wrapperCard);
       wrapperCard.innerHTML += addPokemonCard(name, sprites, id, height, types, weight, base_experience)
-      console.log(data);
     })
 }
 
@@ -79,7 +78,8 @@ const handleFormSubmit = (event) => {
   event.preventDefault();
   const formData = new FormData(event.target)
   const valueName = formData.get('name')
-  handleApiFetch(valueName)
+  const resultName = valueName.toLowerCase();
+  handleApiFetch(resultName)
 }
 
 const formSubmit = document.querySelector(".form");
